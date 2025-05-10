@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio de Publicidad y Marketing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Estilos personalizados (puedes agregar/modificar aquí) */
+        .hero {
+            background-image: linear-gradient(to bottom right, #e0f2fe, #d3d8ef); /* Gradiente suave */
+        }
+        .hero-content {
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+        }
+        .profile-image img {
+            border-radius: 0.5rem; /* Bordes redondeados para la imagen de perfil */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Sombra sutil */
+        }
+        .project-card {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+        }
+        .project-card:hover {
+            transform: translateY(-0.5rem); /* Ligeramente hacia arriba al hacer hover */
+            box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.15), 0 3px 6px -1px rgba(0, 0, 0, 0.08);
+        }
+        .project-card img {
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+        .project-card .p-6 {
+            padding: 1.5rem;
+        }
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        .skills-list li {
+            background-color: #e0f7fa; /* Un color de fondo muy claro para las habilidades */
+            border-radius: 1rem; /* Bordes más redondeados para las habilidades */
+            padding: 0.75rem 1.5rem;
+            text-align: center;
+            color: #06728a; /* Un color de texto más oscuro para las habilidades */
+            font-semibold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.08), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+        }
+
+        .skills-list li:hover {
+            background-color: #b2ebf2; /* Un color de fondo un poco más intenso al hacer hover */
+            transform: translateY(-0.25rem);
+            box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .contact-details {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        .contact-details p {
+            font-size: 1.1rem;
+            color: #4a5568;
+        }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center justify-between">
+                <a href="#inicio" class="text-xl font-semibold text-gray-800">Inicio</a>
+                <ul class="flex space-x-6">
+                    <li><a href="#acerca-de-mi" class="text-gray-700 hover:text-blue-600 transition duration-300">Acerca de Mí</a></li>
+                    <li><a href="#proyectos" class="text-gray-700 hover:text-blue-600 transition duration-300">Mis Proyectos</a></li>
+                    <li><a href="#habilidades" class="text-gray-700 hover:text-blue-600 transition duration-300">Habilidades</a></li>
+                    <li><a href="#contacto" class="text-gray-700 hover:text-blue-600 transition duration-300">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-800 mb-4">¡Hola! Soy Elizabeth Cartagena</h1>
+                <p class="text-lg sm:text-xl text-gray-700 mb-8">Profesional de Publicidad y Marketing apasionado por crear estrategias impactantes.</p>
+                <a href="#proyectos" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300">Ver mis proyectos</a>
+            </div>
+        </section>
+
+        <section id="acerca-de-mi" class="bg-white py-16 md:py-24">
+            <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+                <div class="profile-image">
+                    <img src="tu-foto.jpg" alt="Tu Foto de Perfil" class="rounded-lg shadow-lg w-full max-w-md mx-auto">
+                </div>
+                <div class="profile-text">
+                    <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4">Acerca de mí</h2>
+                    <p class="text-gray-700 leading-relaxed">Soy una mente creativa con visión estratégica, especializada en publicidad y marketing. Conecto marcas con personas a través de ideas que generan impacto y resultados. Me apasiona construir mensajes que venden, emocionan y se quedan en la memoria. He trabajado en campañas digitales, branding, gestión de redes y posicionamiento, siempre con un enfoque analítico y orientado a resultados. Si hay una historia que contar, yo sé cómo hacer que se escuche.</p>
+                    <p class="text-gray-700 leading-relaxed mt-4"></p>
+                    </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="bg-gray-100 py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 mb-8 text-center">Mis Proyectos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="project-card">
+                        <img src="proyecto1.jpg" alt="Proyecto 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Campaña en redes sociales para lanzamiento de productos</h3>
+                            <p class="text-gray-600 leading-relaxed">Objetivo: Generar awareness y aumentar seguidores para el lanzamiento de un nuevo producto.
+
+Estrategia: Creación de contenido visual y storytelling para Instagram y TikTok, con influencers microtargeteados.
+
+Resultado: +25% de engagement, 10K seguidores nuevos y conversión del 12% en leads calificados.</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="proyecto2.jpg" alt="Proyecto 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Estrategia de marketing digital con enfoque en performance</h3>
+                            <p class="text-gray-600 leading-relaxed">Objetivo: Optimizar las campañas de Google Ads y redes para una tienda e-commerce.
+
+Estrategia: Análisis de data, segmentación avanzada, A/B testing de anuncios y mejora en landing pages.
+
+Resultado: CPA reducido en un 30% y ROAS mejorado en un 2.5x.</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="proyecto3.jpg" alt="Proyecto 3" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Rebranding para una marca local</h3>
+                            <p class="text-gray-600 leading-relaxed">Objetivo: Renovar identidad visual y tono comunicacional para conectar con un público más joven.
+
+Estrategia: Análisis de marca, rediseño de logo y paleta, desarrollo de key visuals y tagline emocional.
+
+Resultado: Incremento del 40% en recordación de marca y feedback positivo en encuestas de percepción.</p>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="bg-white py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 mb-8 text-center">Habilidades</h2>
+                <ul class="skills-list">
+                    <li>Marketing Digital</li>
+                    <li>Estrategia de Marca</li>
+                    <li>Gestión de Redes Sociales</li>
+                    <li>SEO/SEM</li>
+                    <li>Creación de Contenido</li>
+                    <li>Análisis de Datos</li>
+                    <li>Habilidades de Liderazgo y Gestión</li>
+                    <li>[Añade aquí tus otras habilidades relevantes]</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contacto" class="bg-gray-100 py-16 md:py-24">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 mb-8">Contacto</h2>
+                <p class="text-lg text-gray-700 mb-6">¡Hablemos! Si tienes alguna pregunta o propuesta, no dudes en contactarme.</p>
+                <div class="contact-details">
+                    <p><strong>Email:</strong> <a href="mailto:Elizabethcartagenalopez@hotmail.com" class="text-blue-600 hover:text-blue-800 transition duration-300">Elizabethcartagenalopez@hotmail.com</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="[Enlace a tu perfil de LinkedIn]" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition duration-300">Mi perfil de LinkedIn</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto px-4 text-center text-gray-300">
+            &copy; 2025 Elizabeth Cartagena. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script>
+       // Ejemplo de JavaScript: Puedes agregar interactividad aquí
+        const proyectoCards = document.querySelectorAll('.project-card');
+
+        proyectoCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.classList.add('shadow-lg');
+                card.style.transform = 'translateY(-5px)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.classList.remove('shadow-lg');
+                card.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Ejemplo de JavaScript: Smooth scrolling para los enlaces de la barra de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>
